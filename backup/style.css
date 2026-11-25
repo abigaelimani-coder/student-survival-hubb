@@ -1,0 +1,574 @@
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+:root {
+    --background: #faf8fc;
+    --surface: #ffffff;
+    --text: #30283b;
+    --muted: #898092;
+    --purple: #9576b9;
+    --border: #eee8f3;
+    --shadow: 0 8px 30px rgba(64, 44, 82, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    height: 76px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 22px;
+    font-weight: 750;
+    letter-spacing: -1px;
+}
+
+.logo-icon {
+    color: var(--purple);
+    font-size: 25px;
+}
+
+.logo-dot {
+    color: var(--purple);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--purple);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-btn,
+.menu-btn {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border);
+    background: var(--background);
+    border-radius: 12px;
+    color: var(--text);
+    font-size: 18px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    max-width: 1120px;
+    width: 86%;
+    margin: auto;
+}
+
+/* =========================
+   WELCOME SECTION
+========================= */
+
+.welcome-section {
+    min-height: 350px;
+    margin-top: 38px;
+    padding: 55px 65px;
+    border-radius: 25px;
+    background: linear-gradient(115deg, #eee5f7, #f8edf5, #f5effb);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.welcome-content {
+    max-width: 540px;
+    z-index: 2;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #987db3;
+    font-weight: 700;
+}
+
+.welcome-content h1 {
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.15;
+    margin: 17px 0;
+    letter-spacing: -2px;
+    color: #392e47;
+}
+
+.welcome-content h1 span {
+    color: #9b7db9;
+}
+
+.welcome-content p {
+    color: #766b81;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 390px;
+}
+
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 25px;
+    background: #9273b0;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 11px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.primary-btn:hover {
+    background: #795b98;
+    transform: translateY(-2px);
+}
+
+.welcome-decoration {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    flex-shrink: 0;
+    margin-right: 25px;
+}
+
+.decoration-circle {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.55);
+    border: 1px solid rgba(255,255,255,0.8);
+    display: grid;
+    place-items: center;
+    font-size: 95px;
+    color: #ad91c5;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+
+.floating-star {
+    position: absolute;
+    color: #9c7dbb;
+}
+
+.star-one {
+    top: 10px;
+    right: 5px;
+    font-size: 30px;
+}
+
+.star-two {
+    bottom: 10px;
+    left: 0;
+    font-size: 25px;
+}
+
+.star-three {
+    right: 0;
+    bottom: 35px;
+    font-size: 35px;
+}
+
+/* =========================
+   REMINDER
+========================= */
+
+.reminder-section {
+    margin: 30px 0 65px;
+    padding: 20px 25px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: var(--shadow);
+}
+
+.reminder-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    background: #f1eaf8;
+    display: grid;
+    place-items: center;
+    color: #997bb5;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.reminder-section p {
+    font-size: 13px;
+    color: var(--text);
+    margin-top: 6px;
+}
+
+.reminder-flower {
+    margin-left: auto;
+    font-size: 27px;
+    color: #b49acb;
+}
+
+/* =========================
+   WORKSPACE
+========================= */
+
+.workspace-section {
+    margin-bottom: 65px;
+    scroll-margin-top: 100px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    letter-spacing: -0.7px;
+}
+
+.heading-decoration {
+    color: #ad91c5;
+    font-size: 30px;
+}
+
+.workspace-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.workspace-card {
+    padding: 25px;
+    min-height: 205px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.25s ease;
+    box-shadow: var(--shadow);
+}
+
+.workspace-card:hover {
+    transform: translateY(-5px);
+    border-color: #cbb6dd;
+    box-shadow: 0 14px 35px rgba(64, 44, 82, 0.1);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    font-size: 22px;
+    color: #896da6;
+    background: #f1eaf7;
+}
+
+.card-arrow {
+    color: var(--muted);
+    font-size: 20px;
+}
+
+.card-category {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.workspace-card h3 {
+    font-size: 21px;
+    margin: 7px 0;
+}
+
+.workspace-card p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 300px;
+}
+
+.planner-card {
+    background: linear-gradient(135deg, var(--surface), #faf5ff);
+}
+
+.study-card {
+    background: linear-gradient(135deg, var(--surface), #f4f7ff);
+}
+
+.journal-card {
+    background: linear-gradient(135deg, var(--surface), #fff5f7);
+}
+
+.motivation-card {
+    background: linear-gradient(135deg, var(--surface), #fff9ef);
+}
+
+/* =========================
+   CLOSING SECTION
+========================= */
+
+.closing-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f0e9f7;
+    border-radius: 20px;
+    margin-bottom: 45px;
+}
+
+.closing-section span {
+    font-size: 26px;
+    color: #9c7bb9;
+}
+
+.closing-section h2 {
+    margin: 12px 0 8px;
+    color: #493b57;
+    font-size: 22px;
+}
+
+.closing-section p {
+    font-size: 13px;
+    color: #81738c;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+    --background: #17141d;
+    --surface: #211c29;
+    --text: #eee7f5;
+    --muted: #aaa0b4;
+    --purple: #c2a2df;
+    --border: #393142;
+    --shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+body.dark .welcome-section {
+    background: linear-gradient(115deg, #33263f, #382a3b, #292239);
+}
+
+body.dark .welcome-content h1 {
+    color: #f2e9fa;
+}
+
+body.dark .welcome-content h1 span {
+    color: #c5a5e1;
+}
+
+body.dark .welcome-content p {
+    color: #c3b5ce;
+}
+
+body.dark .workspace-card {
+    background: var(--surface);
+}
+
+body.dark .closing-section {
+    background: #30263a;
+}
+
+body.dark .closing-section h2 {
+    color: #eee4f6;
+}
+
+body.dark .closing-section p {
+    color: #b9a8c8;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        height: 66px;
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        width: 100%;
+        background: var(--surface);
+        padding: 22px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 23px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .welcome-section {
+        min-height: 300px;
+        padding: 35px 27px;
+    }
+
+    .welcome-content h1 {
+        font-size: 37px;
+    }
+
+    .welcome-decoration {
+        position: absolute;
+        right: -105px;
+        opacity: 0.35;
+    }
+
+    .welcome-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .workspace-grid {
+        gap: 12px;
+    }
+
+    .workspace-card {
+        padding: 17px;
+        min-height: 190px;
+    }
+
+    .workspace-card h3 {
+        font-size: 17px;
+    }
+
+    .workspace-card p {
+        font-size: 11px;
+    }
+
+    .reminder-section {
+        margin-bottom: 45px;
+        padding: 17px;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .workspace-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-content h1 {
+        font-size: 33px;
+    }
+
+    .reminder-flower {
+        display: none;
+    }
+}
+
+ 

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Defines the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on phones and computers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Changes the browser tab title -->
+    <title>My Planner | Student Survival Hub</title>
+
+    <!-- Connects this page to the shared stylesheet -->
+    <link rel="stylesheet" href="planner.css">
+
+    <!-- Loads JavaScript after the HTML has been read -->
+    <script src="planner.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION BAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <!-- Website logo -->
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✿</span>
+            student<span class="logo-dot">.</span>
+        </a>
+
+        <!-- Navigation links -->
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="planner.html" class="active">My Planner</a>
+            <a href="study.html">Study Zone</a>
+            <a href="journal.html">My Journal</a>
+        </nav>
+
+        <!-- Navigation controls -->
+        <div class="nav-actions">
+            <button id="themeToggle" class="theme-btn"
+                aria-label="Toggle dark mode">☾</button>
+
+            <button id="menuToggle" class="menu-btn"
+                aria-label="Open navigation">☰</button>
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- =========================
+             PAGE INTRODUCTION
+        ========================== -->
+
+        <section class="planner-welcome">
+
+            <div>
+                <span class="eyebrow">A LITTLE ORGANIZATION GOES A LONG WAY</span>
+
+                <h1>My Planner<span>.</span></h1>
+
+                <p>
+                    Make room for what matters.
+                    Plan gently, work steadily and celebrate progress.
+                </p>
+            </div>
+
+            <div class="welcome-flower">✿</div>
+
+        </section>
+
+
+        <!-- =========================
+             DATE AND DAILY GREETING
+        ========================== -->
+
+        <section class="date-section">
+
+            <div>
+                <span class="section-label">TODAY'S DATE</span>
+                <h2 id="currentDate">Loading date...</h2>
+            </div>
+
+            <div class="date-note">
+                <span>☁</span>
+                One day at a time.
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DAILY PROGRESS
+        ========================== -->
+
+        <section class="progress-card">
+
+            <div class="progress-heading">
+                <div>
+                    <span class="section-label">YOUR DAILY PROGRESS</span>
+                    <h2>Look how far you've come.</h2>
+                </div>
+
+                <span id="progressPercentage">0%</span>
+            </div>
+
+            <!-- Visual progress bar -->
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <p id="progressMessage">
+                Every little step counts.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             MAIN PLANNER LAYOUT
+        ========================== -->
+
+        <div class="planner-layout">
+
+            <!-- DAILY TASKS -->
+
+            <section class="planner-card tasks-card">
+
+                <div class="card-heading">
+                    <div>
+                        <span class="section-label">YOUR TO-DO LIST</span>
+                        <h2>Today's Tasks</h2>
+                    </div>
+
+                    <span class="heading-icon">✎</span>
+                </div>
+
+                <!-- New task input -->
+                <form id="taskForm" class="task-form">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Add a new task..."
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit">+ Add</button>
+
+                </form>
+
+                <!-- Tasks are inserted here using JavaScript -->
+                <ul id="taskList" class="task-list"></ul>
+
+                <!-- Empty list message -->
+                <p id="emptyMessage" class="empty-message">
+                    Your list is waiting for its first task. ✿
+                </p>
+
+                <!-- Clear completed tasks -->
+                <button id="clearCompleted" class="text-button">
+                    Clear completed tasks
+                </button>
+
+            </section>
+
+
+            <!-- DAILY PRIORITIES -->
+
+            <section class="planner-card priorities-card">
+
+                <div class="card-heading">
+                    <div>
+                        <span class="section-label">FOCUS ON WHAT MATTERS</span>
+                        <h2>Top Priorities</h2>
+                    </div>
+
+                    <span class="heading-icon">✧</span>
+                </div>
+
+                <p class="card-description">
+                    Choose three important things for today.
+                </p>
+
+                <div class="priority-list">
+
+                    <div class="priority-item">
+                        <span>01</span>
+                        <input type="text" placeholder="First priority">
+                    </div>
+
+                    <div class="priority-item">
+                        <span>02</span>
+                        <input type="text" placeholder="Second priority">
+                    </div>
+
+                    <div class="priority-item">
+                        <span>03</span>
+                        <input type="text" placeholder="Third priority">
+                    </div>
+
+                </div>
+
+                <p class="priority-note">
+                    Remember: You don't have to do everything at once.
+                </p>
+
+            </section>
+
+        </div>
+
+
+        <!-- =========================
+             WEEKLY OVERVIEW
+        ========================== -->
+
+        <section class="weekly-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">PLAN AHEAD</span>
+                    <h2>Your Week at a Glance</h2>
+                </div>
+
+                <span class="heading-icon">▦</span>
+            </div>
+
+            <div class="week-grid">
+
+                <div class="day-card">
+                    <span>MON</span>
+                    <strong>01</strong>
+                    <small>Monday</small>
+                </div>
+
+                <div class="day-card">
+                    <span>TUE</span>
+                    <strong>02</strong>
+                    <small>Tuesday</small>
+                </div>
+
+                <div class="day-card">
+                    <span>WED</span>
+                    <strong>03</strong>
+                    <small>Wednesday</small>
+                </div>
+
+                <div class="day-card">
+                    <span>THU</span>
+                    <strong>04</strong>
+                    <small>Thursday</small>
+                </div>
+
+                <div class="day-card">
+                    <span>FRI</span>
+                    <strong>05</strong>
+                    <small>Friday</small>
+                </div>
+
+                <div class="day-card">
+                    <span>SAT</span>
+                    <strong>06</strong>
+                    <small>Saturday</small>
+                </div>
+
+                <div class="day-card">
+                    <span>SUN</span>
+                    <strong>07</strong>
+                    <small>Sunday</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FINAL REMINDER
+        ========================== -->
+
+        <section class="planner-footer-card">
+
+            <span>☁</span>
+
+            <div>
+                <h2>Give yourself some grace.</h2>
+                <p>
+                    A productive day doesn't have to be a perfect day.
+                    Keep going at your own pace.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>Student Survival Hub · Your space to grow</p>
+        <a href="index.html">Back to Home ↑</a>
+    </footer>
+
+</body>
+</html>
+
+ 

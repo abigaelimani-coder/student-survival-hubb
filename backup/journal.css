@@ -1,0 +1,710 @@
+/* =========================
+   COLOUR PALETTE
+========================= */
+
+:root {
+    --background: #faf8fc;
+    --surface: #ffffff;
+    --text: #30283b;
+    --muted: #898092;
+    --purple: #9576b9;
+    --border: #eee8f3;
+    --shadow: 0 8px 30px rgba(64, 44, 82, 0.06);
+}
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    height: 76px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 750;
+    letter-spacing: -1px;
+}
+
+.logo-icon,
+.logo-dot {
+    color: var(--purple);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--purple);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-btn,
+.menu-btn {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--background);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    max-width: 1120px;
+    width: 86%;
+    margin: auto;
+}
+
+/* =========================
+   WELCOME SECTION
+========================= */
+
+.journal-welcome {
+    margin-top: 38px;
+    padding: 45px 55px;
+    min-height: 290px;
+    border-radius: 24px;
+    background: linear-gradient(115deg, #eee5f7, #f8edf5, #f5effb);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #987db3;
+    font-weight: 700;
+}
+
+.welcome-content h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+    margin: 15px 0;
+    color: #392e47;
+}
+
+.welcome-content h1 span {
+    color: #a78bc1;
+}
+
+.welcome-content p {
+    color: #766b81;
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 420px;
+}
+
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 23px;
+    padding: 13px 20px;
+    background: #9273b0;
+    color: white;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.primary-btn:hover {
+    background: #795b98;
+    transform: translateY(-2px);
+}
+
+.journal-decoration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 200px;
+}
+
+.diary-icon {
+    font-size: 100px;
+}
+
+.decoration-star,
+.decoration-flower {
+    position: absolute;
+    color: #a98bc5;
+    font-size: 30px;
+}
+
+.decoration-star {
+    top: 0;
+    right: 15px;
+}
+
+.decoration-flower {
+    bottom: 0;
+    left: 15px;
+}
+
+/* =========================
+   DATE SECTION
+========================= */
+
+.journal-date {
+    margin: 35px 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.journal-date h2 {
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+.date-decoration {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* =========================
+   WRITING PROMPT
+========================= */
+
+.writing-prompt {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-bottom: 60px;
+}
+
+.prompt-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: #f1eaf8;
+    color: #9c7bb9;
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+.writing-prompt p {
+    font-size: 13px;
+    margin-top: 7px;
+    line-height: 1.6;
+}
+
+.prompt-button {
+    margin-left: auto;
+    border: none;
+    background: none;
+    color: var(--purple);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    font-size: 24px;
+    margin-top: 9px;
+    letter-spacing: -0.7px;
+}
+
+.heading-decoration {
+    font-size: 28px;
+    color: #a98bc5;
+}
+
+/* =========================
+   JOURNAL FORM
+========================= */
+
+.write-section {
+    margin-bottom: 65px;
+    scroll-margin-top: 100px;
+}
+
+.journal-form {
+    background: var(--surface);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.journal-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 650;
+    margin: 20px 0 9px;
+}
+
+.journal-form label:first-child {
+    margin-top: 0;
+}
+
+.journal-form input,
+.journal-form select,
+.journal-form textarea {
+    width: 100%;
+    padding: 14px;
+    background: var(--background);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    font-size: 12px;
+}
+
+.journal-form input:focus,
+.journal-form select:focus,
+.journal-form textarea:focus {
+    border-color: var(--purple);
+}
+
+.journal-form textarea {
+    resize: vertical;
+    min-height: 180px;
+    line-height: 1.8;
+}
+
+.form-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.writing-note {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.save-btn {
+    padding: 13px 20px;
+    background: #9273b0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.save-btn:hover {
+    background: #795b98;
+}
+
+/* =========================
+   GRATITUDE CORNER
+========================= */
+
+.gratitude-section {
+    margin-bottom: 65px;
+}
+
+.section-description {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.gratitude-card {
+    padding: 28px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #f3edf8, #fff4f7);
+}
+
+.gratitude-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e6dbea;
+}
+
+.gratitude-item span {
+    color: #a48ac1;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.gratitude-item input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    color: #493b57;
+}
+
+.gratitude-btn {
+    margin-top: 22px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #9273b0;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.gratitude-message {
+    font-size: 11px;
+    margin-top: 12px;
+    color: #755c8b;
+}
+
+/* =========================
+   SAVED ENTRIES
+========================= */
+
+.entries-section {
+    margin-bottom: 65px;
+    scroll-margin-top: 100px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+    outline: none;
+    font-size: 12px;
+}
+
+.search-input:focus {
+    border-color: var(--purple);
+}
+
+.entries-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.entry-card {
+    padding: 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.entry-date {
+    color: var(--purple);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.entry-card h3 {
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+.entry-mood {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #f3edf8;
+    color: #886ca3;
+    font-size: 10px;
+    margin-bottom: 12px;
+}
+
+.entry-content {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.entry-delete {
+    margin-top: 18px;
+    border: none;
+    background: none;
+    color: #b17d96;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.empty-entries {
+    text-align: center;
+    padding: 35px 15px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* =========================
+   CLOSING SECTION
+========================= */
+
+.journal-closing {
+    padding: 38px 25px;
+    background: #f0e9f7;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.journal-closing > span {
+    font-size: 30px;
+}
+
+.journal-closing h2 {
+    margin: 12px 0;
+    font-size: 21px;
+    color: #493b57;
+}
+
+.journal-closing p {
+    max-width: 430px;
+    margin: auto;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #81738c;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 7%;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+}
+
+footer a {
+    color: var(--purple);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+    --background: #17141d;
+    --surface: #211c29;
+    --text: #eee7f5;
+    --muted: #aaa0b4;
+    --purple: #c2a2df;
+    --border: #393142;
+    --shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+body.dark .journal-welcome {
+    background: linear-gradient(115deg, #33263f, #382a3b);
+}
+
+body.dark .welcome-content h1 {
+    color: #f2e9fa;
+}
+
+body.dark .welcome-content p {
+    color: #c3b5ce;
+}
+
+body.dark .gratitude-card,
+body.dark .journal-closing {
+    background: #30263a;
+}
+
+body.dark .gratitude-item {
+    border-color: #493b52;
+}
+
+body.dark .gratitude-item input {
+    color: #eee7f5;
+}
+
+body.dark .journal-closing h2 {
+    color: #eee4f6;
+}
+
+body.dark .journal-closing p {
+    color: #c0aecf;
+}
+
+body.dark .entry-mood {
+    background: #382d44;
+    color: #c5a5e1;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        height: 66px;
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        width: 100%;
+        padding: 22px 6%;
+        background: var(--surface);
+        flex-direction: column;
+        gap: 22px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .journal-welcome {
+        padding: 30px 25px;
+    }
+
+    .welcome-content h1 {
+        font-size: 37px;
+    }
+
+    .diary-icon {
+        font-size: 70px;
+    }
+
+    .entries-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .journal-decoration {
+        display: none;
+    }
+
+    .journal-date {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .journal-form {
+        padding: 20px;
+    }
+
+    .form-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .gratitude-card {
+        padding: 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+    }
+
+}
+
+ 

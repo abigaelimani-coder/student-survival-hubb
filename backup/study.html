@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Defines character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
+    <title>Study Zone | Student Survival Hub</title>
+
+    <!-- Connects the stylesheet -->
+    <link rel="stylesheet" href="study.css">
+
+    <!-- Connects JavaScript -->
+    <script src="study.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION BAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✿</span>
+            student<span class="logo-dot">.</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="planner.html">My Planner</a>
+            <a href="study.html" class="active">Study Zone</a>
+            <a href="journal.html">My Journal</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="theme-btn" id="themeToggle"
+                aria-label="Toggle dark mode">☾</button>
+
+            <button class="menu-btn" id="menuToggle"
+                aria-label="Open navigation">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- =========================
+             WELCOME SECTION
+        ========================== -->
+
+        <section class="study-welcome">
+
+            <div class="welcome-content">
+
+                <span class="eyebrow">YOUR PERSONAL LEARNING SPACE</span>
+
+                <h1>Welcome to<br>
+                    <span>Study Zone.</span>
+                </h1>
+
+                <p>
+                    Learn with curiosity, understand difficult concepts
+                    and make every study session count.
+                </p>
+
+                <a href="#subjects" class="primary-btn">
+                    Start learning <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="welcome-art">
+                <span>✧</span>
+                <div class="book-illustration">📚</div>
+                <span>✿</span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             STUDY OVERVIEW
+        ========================== -->
+
+        <section class="study-overview">
+
+            <div class="overview-card">
+                <span class="overview-icon">📖</span>
+                <div>
+                    <h3>Learn</h3>
+                    <p>Explore new concepts</p>
+                </div>
+            </div>
+
+            <div class="overview-card">
+                <span class="overview-icon">✎</span>
+                <div>
+                    <button><a href="revise.html">
+                    <h3>Revise</h3></a></button>
+                    <p>Strengthen your knowledge</p>
+                    
+
+            <p>Explore different ways to improve your learning.</p>
+
+                </div>
+            </div>
+
+            <div class="overview-card">
+                <span class="overview-icon">✧</span>
+                <div>
+                    <h3>Grow</h3>
+                    <p>One lesson at a time</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SUBJECTS SECTION
+        ========================== -->
+
+        <section class="subjects-section" id="subjects">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">YOUR ACADEMIC SPACE</span>
+                    <h2>Explore Your Subjects</h2>
+                    <p>Choose a subject and begin learning.</p>
+                </div>
+
+                <span class="heading-flower">✿</span>
+
+            </div>
+
+            <div class="subject-grid">
+
+                <div class="subject-card">
+                    <span class="subject-icon">➗</span>
+                    <h3>Mathematics</h3>
+                    <p>Numbers, calculations and problem-solving.</p>
+                    <span class="subject-tag">Think logically</span>
+                </div>
+
+                <div class="subject-card">
+                    <span class="subject-icon">🧪</span>
+                    <h3>Integrated Science</h3>
+                    <p>Discover how the world works.</p>
+                    <span class="subject-tag">Explore science</span>
+                </div>
+
+                <div class="subject-card">
+                    <span class="subject-icon">🌍</span>
+                    <h3>Social Studies</h3>
+                    <p>Explore history, geography and society.</p>
+                    <span class="subject-tag">Understand the world</span>
+                </div>
+
+                <div class="subject-card">
+                    <span class="subject-icon">🌱</span>
+                    <h3>Agriculture</h3>
+                    <p>Learn about farming and the environment.</p>
+                    <span class="subject-tag">Learn and grow</span>
+                </div>
+
+                <div class="subject-card">
+                    <span class="subject-icon">📝</span>
+                    <h3>English</h3>
+                    <p>Build communication and writing skills.</p>
+                    <span class="subject-tag">Express yourself</span>
+                </div>
+
+                <div class="subject-card">
+                    <span class="subject-icon">📚</span>
+                    <h3>Kiswahili</h3>
+                    <p>Explore lugha, sarufi na fasihi.</p>
+                    <span class="subject-tag">Jifunze zaidi</span>
+                </div>
+
+                <div class="subject-card">
+                    <span class="subject-icon">🎨</span>
+                    <h3>Creative Arts</h3>
+                    <p>Discover creativity and artistic expression.</p>
+                    <span class="subject-tag">Create freely</span>
+                </div>
+
+                <div class="subject-card">
+                    <span class="subject-icon">💻</span>
+                    <h3>Pre-Technical Studies</h3>
+                    <p>Explore design, technology and practical skills.</p>
+                    <span class="subject-tag">Build your skills</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FOCUS CORNER
+        ========================== -->
+
+        <section class="focus-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">TIME TO CONCENTRATE</span>
+                    <h2>Focus Corner</h2>
+                    <p>Give your attention to one thing at a time.</p>
+                </div>
+
+                <span class="heading-flower">☁</span>
+
+            </div>
+
+            <div class="focus-card">
+
+                <span class="focus-label">YOUR FOCUS SESSION</span>
+
+                <div id="timerDisplay" class="timer-display">
+                    25:00
+                </div>
+
+                <p id="timerMessage">
+                    Ready when you are.
+                </p>
+
+                <div class="timer-controls">
+
+                    <button id="startTimer" class="primary-btn">
+                        Start
+                    </button>
+
+                    <button id="pauseTimer" class="secondary-btn">
+                        Pause
+                    </button>
+
+                    <button id="resetTimer" class="secondary-btn">
+                        Reset
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LEARNING RESOURCES
+        ========================== -->
+
+        <section class="resources-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">LEARN BEYOND THE CLASSROOM</span>
+                    <h2>Learning Resources</h2>
+                    <p>Useful spaces to support your learning journey.</p>
+                </div>
+
+                <span class="heading-flower">✧</span>
+
+            </div>
+
+            <!-- CB Spark Kenya resource -->
+
+            <div class="resource-card">
+
+                <div class="resource-icon">▶</div>
+
+                <div class="resource-content">
+
+                    <span class="resource-label">YOUTUBE LEARNING CHANNEL</span>
+
+                    <h3>CBE Spark Kenya</h3>
+
+                    <p>
+                        Explore educational videos and get help
+                        understanding difficult concepts.
+                    </p>
+
+                    <a href="https://www.youtube.com/results?search_query=CBESpark+Kenya"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="resource-link">
+                        Explore CBE Spark Kenya →
+                    </a>
+
+                </div>
+                 </div>
+
+        </section>
+
+
+        <!-- =========================
+             REVISION REMINDER
+        ========================== -->
+
+        <section class="study-reminder">
+
+            <span>🌷</span>
+
+            <div>
+                <h2>A reminder for your learning journey</h2>
+                <p>
+                    Understanding one concept deeply is better
+                    than rushing through ten without understanding.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+<footer>
+<!-- PAST PAPERS AND REVISION RESOURCES -->
+<section class="study-resources">
+
+    <div class="section-heading">
+        <h2>Past Papers & Resources</h2>
+        <p>Find resources to help you prepare and practise.</p>
+    </div>
+
+    <div class="resource-grid">
+
+        <!-- EasyElimu -->
+        <div class="study-card resource-card">
+            <span class="resource-icon">📚</span>
+            <h3>EasyElimu</h3>
+            <p>
+                Access CBC notes, past papers,
+                quizzes and revision materials.
+            </p>
+            <a href="https://www.easyelimu.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="button">
+                Explore EasyElimu ↗
+            </a>
+        </div>
+
+        <!-- CBE Arena -->
+        <div class="study-card resource-card">
+            <span class="resource-icon">📝</span>
+            <h3>CBE Arena</h3>
+            <p>
+                Explore examination papers,
+                revision materials and more.
+            </p>
+            <a href="https://www.cbcarena.co.ke/resources/?q=Past+Paper"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="button">
+                Explore Arena ↗
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+    <div class="footer">
+        <p>Student Survival Hub · Learn at your own pace</p>
+        <a href="index.html">Back to Home ↑</a>
+    </div>
+    </footer>
+
+</body>
+</html>
+
+ 

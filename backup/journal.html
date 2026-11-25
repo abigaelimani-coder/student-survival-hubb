@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Defines character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
+    <title>My Journal | Student Survival Hub</title>
+
+    <!-- Connects the journal stylesheet -->
+    <link rel="stylesheet" href="journal.css">
+
+    <!-- Loads JavaScript -->
+    <script src="journal.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✿</span>
+            student survival hub<span class="logo-dot">.</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="planner.html">My Planner</a>
+            <a href="study.html">Study Zone</a>
+            <a href="journal.html" class="active">My Journal</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="theme-btn" id="themeToggle"
+                aria-label="Toggle dark mode">☾</button>
+
+            <button class="menu-btn" id="menuToggle"
+                aria-label="Open navigation">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- =========================
+             WELCOME SECTION
+        ========================== -->
+
+        <section class="journal-welcome">
+
+            <div class="welcome-content">
+
+                <span class="eyebrow">A SPACE THAT IS YOURS</span>
+
+                <h1>Dear Diary<span>...</span></h1>
+
+                <p>
+                    Your thoughts, your memories, your story.
+                    Take a moment to pause and put your feelings into words.
+                </p>
+
+                <a href="#write-entry" class="primary-btn">
+                    Write something <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="journal-decoration">
+                <span class="decoration-star">✧</span>
+                <span class="diary-icon">📖</span>
+                <span class="decoration-flower">✿</span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DATE AND GREETING
+        ========================== -->
+
+        <section class="journal-date">
+
+            <div>
+                <span class="section-label">TODAY'S PAGE</span>
+                <h2 id="journalDate">Loading date...</h2>
+            </div>
+
+            <span class="date-decoration">☁ A moment for yourself.</span>
+
+        </section>
+
+
+        <!-- =========================
+             DAILY WRITING PROMPT
+        ========================== -->
+
+        <section class="writing-prompt">
+
+            <div class="prompt-icon">✧</div>
+
+            <div>
+                <span class="section-label">A THOUGHT TO GET YOU STARTED</span>
+                <p id="dailyPrompt">
+                    What is one thing you wish someone understood about you?
+                </p>
+            </div>
+
+            <button id="newPrompt" class="prompt-button"
+                aria-label="Show another writing prompt">↻</button>
+
+        </section>
+
+
+        <!-- =========================
+             JOURNAL WRITING AREA
+        ========================== -->
+
+        <section class="write-section" id="write-entry">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">YOUR PERSONAL PAGES</span>
+                    <h2>Write your heart out.</h2>
+                </div>
+
+                <span class="heading-decoration">✿</span>
+
+            </div>
+
+
+            <form id="journalForm" class="journal-form">
+
+                <!-- Entry title -->
+                <label for="entryTitle">Give this entry a title</label>
+
+                <input
+                    type="text"
+                    id="entryTitle"
+                    placeholder="A day worth remembering..."
+                    required
+                >
+
+
+                <!-- Mood selector -->
+                <label for="entryMood">How are you feeling today?</label>
+
+                <select id="entryMood" required>
+
+                    <option value="">Choose your mood</option>
+                    <option value="Happy">☀ Happy</option>
+                    <option value="Grateful">🌷 Grateful</option>
+                    <option value="Peaceful">☁ Peaceful</option>
+                    <option value="Excited">✨ Excited</option>
+                    <option value="Thoughtful">🌙 Thoughtful</option>
+                    <option value="Tired">💤 Tired</option>
+                    <option value="Overwhelmed">🌧 Overwhelmed</option>
+                    <option value="Unsure">🪐 Unsure</option>
+
+                </select>
+
+
+                <!-- Main writing area -->
+                <label for="entryContent">Your thoughts</label>
+
+                <textarea
+                    id="entryContent"
+                    rows="9"
+                    placeholder="Dear diary,
+
+Today was..."
+                    required
+                ></textarea>
+
+
+                <!-- Save entry button -->
+                <div class="form-bottom">
+
+                    <span class="writing-note">
+                        ✿ This page belongs to you.
+                    </span>
+
+                    <button type="submit" class="save-btn">
+                        Save Entry ✧
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- =========================
+             GRATITUDE CORNER
+        ========================== -->
+
+        <section class="gratitude-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">NOTICE THE LITTLE THINGS</span>
+                    <h2>Three Little Gratitudes</h2>
+                </div>
+
+                <span class="heading-decoration">♡</span>
+
+            </div>
+
+            <p class="section-description">
+                What are three things you're thankful for today?
+            </p>
+
+            <div class="gratitude-card">
+
+                <div class="gratitude-item">
+                    <span>01</span>
+                    <input type="text" id="gratitude1"
+                        placeholder="Something that made you smile...">
+                </div>
+
+                <div class="gratitude-item">
+                    <span>02</span>
+                    <input type="text" id="gratitude2"
+                        placeholder="Someone you're grateful for...">
+                </div>
+
+                <div class="gratitude-item">
+                    <span>03</span>
+                    <input type="text" id="gratitude3"
+                        placeholder="Something you appreciate...">
+                </div>
+
+                <button id="saveGratitude" class="gratitude-btn">
+                    Save my gratitudes ✿
+                </button>
+
+                <p id="gratitudeMessage" class="gratitude-message"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SAVED JOURNAL ENTRIES
+        ========================== -->
+
+        <section class="entries-section" id="saved-entries">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">YOUR COLLECTION OF MOMENTS</span>
+                    <h2>My Saved Pages</h2>
+                </div>
+
+                <span class="heading-decoration">📚</span>
+
+            </div>
+
+            <!-- Search saved entries -->
+            <input
+                type="search"
+                id="searchEntries"
+                class="search-input"
+                placeholder="Search your memories..."
+            >
+
+            <!-- JavaScript displays saved entries here -->
+            <div id="entriesContainer" class="entries-grid"></div>
+
+            <!-- Appears when there are no saved entries -->
+            <p id="noEntries" class="empty-entries">
+                Your story begins with your first page. ✿
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             CLOSING MESSAGE
+        ========================== -->
+
+        <section class="journal-closing">
+
+            <span>🌷</span>
+
+            <h2>Your story is still unfolding.</h2>
+
+            <p>
+                Give yourself time to grow.
+                One day, these pages will remind you how far you've come.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>Student Survival Hub · Every page tells a story</p>
+        <a href="index.html">Back to Home ↑</a>
+    </footer>
+
+</body>
+</html>
+
+ 

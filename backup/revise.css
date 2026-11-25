@@ -1,0 +1,182 @@
+
+/* Introduction section */
+
+.study-hero {
+    background: #48356B;
+    color: white;
+    padding: 55px 35px;
+    border-radius: 16px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.study-hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.study-hero p {
+    max-width: 650px;
+    margin: 12px auto;
+}
+
+.study-label {
+    color: #B9A2E8;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+/* Study sections */
+
+.study-section {
+    margin: 40px 0;
+}
+
+.study-section > h2 {
+    color: #48356B;
+    margin-bottom: 12px;
+}
+
+.study-section > p {
+    margin-bottom: 20px;
+}
+
+/* Featured educator card */
+
+.resource-card {
+    background: #EAE3F5;
+    border-left: 6px solid #48356B;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.resource-content h3 {
+    color: #48356B;
+    font-size: 25px;
+}
+
+/* Study technique cards */
+
+.study-section .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.study-section .cards-container .card {
+    flex: 1 1 220px;
+    min-width: 0;
+}
+
+/* Revision checklist */
+
+.study-section .card label {
+    display: block;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.study-section input[type="checkbox"] {
+    accent-color: #48356B;
+    margin-right: 10px;
+}
+
+/* Final encouragement section */
+
+.study-ending {
+    background: #EAE3F5;
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 40px 0;
+}
+
+.study-ending h2 {
+    color: #48356B;
+}
+
+
+#darkModeBtn {
+    background-color: #493078;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode header,
+body.dark-mode section,
+body.dark-mode .container {
+    background-color: #242424;
+    color: white;
+}
+
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: white;
+}
+/* Make the video smaller */
+.video-container {
+    max-width: 300px;
+    margin: 15px auto;
+}
+
+/* Video size */
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 10px;
+}
+#video-cont{
+    max-width: 300px;
+    margin: 15px auto
+}
+#video-cont iframe{
+    width: 100%;
+    height: 100px;
+    border: none;
+    border-radius: 10px;
+}
+.image{
+    max-width: 400px;
+    margin: 12px auto;
+}
+.image img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+}
+.button{
+    display: inline-block;
+    background-color: #48356B;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all in 0.3s ease;/*Makes the transition happen smoothly instead of suddenly*/
+}
+
+.button:hover {
+    color: #121212;
+    background-color:#48356B ; /*changes the button color when a cussor hovers over it*/
+    transition: scale(1.04); /*slighty enlarges the button when mouse hovers over it*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15)/*addds depth when mouse hovers over it*/
+}

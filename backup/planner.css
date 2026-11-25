@@ -1,0 +1,648 @@
+/* =========================
+   COLOUR VARIABLES
+   These control the website's colour palette.
+========================= */
+
+:root {
+    --background: #faf8fc;
+    --surface: #ffffff;
+    --text: #30283b;
+    --muted: #898092;
+    --purple: #9576b9;
+    --border: #eee8f3;
+    --shadow: 0 8px 30px rgba(64, 44, 82, 0.06);
+}
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    height: 76px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 750;
+    letter-spacing: -1px;
+}
+
+.logo-icon,
+.logo-dot {
+    color: var(--purple);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--purple);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-btn,
+.menu-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    max-width: 1120px;
+    width: 86%;
+    margin: auto;
+}
+
+/* =========================
+   WELCOME SECTION
+========================= */
+
+.planner-welcome {
+    margin-top: 40px;
+    padding: 45px;
+    min-height: 210px;
+    border-radius: 22px;
+    background: linear-gradient(115deg, #eee5f7, #f8edf5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #987db3;
+    font-weight: 700;
+}
+
+.planner-welcome h1 {
+    font-size: 43px;
+    letter-spacing: -2px;
+    margin: 13px 0;
+    color: #392e47;
+}
+
+.planner-welcome h1 span {
+    color: #9b7db9;
+}
+
+.planner-welcome p {
+    font-size: 13px;
+    color: #766b81;
+    line-height: 1.8;
+    max-width: 450px;
+}
+
+.welcome-flower {
+    font-size: 100px;
+    color: #b397ca;
+    opacity: 0.65;
+}
+
+/* =========================
+   DATE SECTION
+========================= */
+
+.date-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 38px 0 25px;
+}
+
+.date-section h2 {
+    font-size: 20px;
+    margin-top: 7px;
+}
+
+.date-note {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.date-note span {
+    color: var(--purple);
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* =========================
+   PROGRESS CARD
+========================= */
+
+.progress-card {
+    padding: 25px;
+    border-radius: 17px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    margin-bottom: 25px;
+}
+
+.progress-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-heading h2 {
+    font-size: 19px;
+    margin-top: 8px;
+}
+
+#progressPercentage {
+    color: var(--purple);
+    font-size: 23px;
+    font-weight: 750;
+}
+
+.progress-track {
+    height: 9px;
+    background: #eee8f3;
+    border-radius: 20px;
+    margin: 22px 0 12px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #a68ac5, #d2afd7);
+    border-radius: 20px;
+    transition: width 0.4s;
+}
+
+.progress-card > p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* =========================
+   PLANNER GRID
+========================= */
+
+.planner-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+}
+
+.planner-card {
+    padding: 25px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-heading h2 {
+    font-size: 21px;
+    margin-top: 8px;
+}
+
+.heading-icon {
+    color: #aa8dc4;
+    font-size: 26px;
+}
+
+.card-description {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 18px 0;
+}
+
+/* =========================
+   TASK INPUT
+========================= */
+
+.task-form {
+    display: flex;
+    gap: 9px;
+    margin: 23px 0;
+}
+
+.task-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.task-form input:focus {
+    border-color: var(--purple);
+}
+
+.task-form button {
+    padding: 0 17px;
+    background: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.task-form button:hover {
+    background: #795b98;
+}
+
+/* =========================
+   TASK LIST
+========================= */
+
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+}
+
+.task-item input {
+    accent-color: var(--purple);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.task-item span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+.delete-task {
+    border: none;
+    background: none;
+    color: #b18a9a;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.empty-message {
+    font-size: 12px;
+    text-align: center;
+    color: var(--muted);
+    padding: 20px 0;
+}
+
+.text-button {
+    border: none;
+    background: none;
+    color: var(--purple);
+    cursor: pointer;
+    font-size: 11px;
+    margin-top: 18px;
+}
+
+/* =========================
+   PRIORITIES
+========================= */
+
+.priority-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.priority-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.priority-item span {
+    color: #a48ac1;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.priority-item input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.priority-note {
+    margin-top: 25px;
+    padding: 13px;
+    border-radius: 10px;
+    background: #f5eff9;
+    color: #887395;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* =========================
+   WEEKLY OVERVIEW
+========================= */
+
+.weekly-section {
+    margin: 60px 0;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+.section-heading h2 {
+    font-size: 23px;
+    margin-top: 9px;
+}
+
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+}
+
+.day-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 18px 8px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: var(--shadow);
+}
+
+.day-card span {
+    font-size: 9px;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.day-card strong {
+    font-size: 21px;
+}
+
+.day-card small {
+    color: var(--muted);
+    font-size: 9px;
+}
+
+/* =========================
+   CLOSING REMINDER
+========================= */
+
+.planner-footer-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 28px;
+    background: #f0e9f7;
+    border-radius: 18px;
+    margin-bottom: 45px;
+}
+
+.planner-footer-card > span {
+    color: #a58ac2;
+    font-size: 35px;
+}
+
+.planner-footer-card h2 {
+    font-size: 18px;
+    color: #493b57;
+}
+
+.planner-footer-card p {
+    font-size: 12px;
+    color: #81738c;
+    line-height: 1.7;
+    margin-top: 6px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 7%;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+}
+
+footer a {
+    color: var(--purple);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+    --background: #17141d;
+    --surface: #211c29;
+    --text: #eee7f5;
+    --muted: #aaa0b4;
+    --purple: #c2a2df;
+    --border: #393142;
+    --shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+body.dark .planner-welcome {
+    background: linear-gradient(115deg, #33263f, #382a3b);
+}
+
+body.dark .planner-welcome h1 {
+    color: #f2e9fa;
+}
+
+body.dark .planner-welcome p {
+    color: #c3b5ce;
+}
+
+body.dark .priority-note,
+body.dark .planner-footer-card {
+    background: #30263a;
+}
+
+body.dark .priority-note,
+body.dark .planner-footer-card p {
+    color: #c0aecf;
+}
+
+body.dark .planner-footer-card h2 {
+    color: #eee4f6;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        padding: 0 5%;
+        height: 66px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        width: 100%;
+        padding: 22px 6%;
+        background: var(--surface);
+        flex-direction: column;
+        gap: 22px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .planner-welcome {
+        padding: 30px 25px;
+    }
+
+    .planner-welcome h1 {
+        font-size: 35px;
+    }
+
+    .welcome-flower {
+        font-size: 65px;
+    }
+
+    .planner-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .week-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 420px) {
+
+    .welcome-flower {
+        display: none;
+    }
+
+    .date-section {
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .week-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .planner-card {
+        padding: 19px;
+    }
+}
+
+ 

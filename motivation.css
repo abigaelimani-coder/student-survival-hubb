@@ -1,0 +1,329 @@
+/* =========================================
+   MOTIVATION LOUNGE
+   Creates a dreamy, soft and welcoming look
+========================================= */
+:root {
+    --background: #faf8fc;
+    --surface: #ffffff;
+    --text: #30283b;
+    --muted: #898092;
+    --purple: #9576b9;
+    --border: #eee8f3;
+    --shadow: 0 8px 30px rgba(64, 44, 82, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    height: 76px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 22px;
+    font-weight: 750;
+    letter-spacing: -1px;
+}
+
+.logo-icon {
+    color: var(--purple);
+    font-size: 25px;
+}
+
+.logo-dot {
+    color: var(--purple);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--purple);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.motivation-page {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* Small introductory labels */
+.motivation-page .eyebrow {
+    color: #9879bd;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+/* Main hero section */
+.motivation-hero {
+    text-align: center;
+    padding: 75px 25px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #eee5fa, #fff5ed, #e8e4f8);
+    margin-bottom: 55px;
+}
+
+.motivation-hero h1 {
+    color: #57416f;
+    font-size: clamp(2.2rem, 6vw, 3.6rem);
+    margin: 12px 0;
+}
+
+.motivation-hero p:not(.eyebrow) {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #71647d;
+    line-height: 1.8;
+}
+
+/* Shared button style */
+.motivation-btn {
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 23px;
+    background: #8d70ad;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.motivation-btn:hover {
+    background: #70528f;
+    transform: translateY(-3px);
+}
+
+/* Sections */
+.motivation-section {
+    margin: 55px 0;
+    text-align: center;
+}
+
+.motivation-section h2 {
+    color: #5d486f;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* Quote card */
+.quote-card,
+.reset-card,
+.faith-card,
+.challenge-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 24px;
+    background: #faf6ff;
+    border: 1px solid #eee4f7;
+    box-shadow: 0 8px 25px rgba(90, 65, 110, 0.07);
+}
+
+.quote-mark {
+    display: block;
+    color: #b69bd2;
+    font-size: 4rem;
+    height: 45px;
+}
+
+#daily-quote {
+    color: #62516f;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+#quote-author,
+.faith-card span:last-of-type {
+    display: block;
+    color: #9879bd;
+    margin-bottom: 22px;
+    font-size: 0.9rem;
+}
+
+/* Mindset cards */
+.mindset-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.mindset-card {
+    padding: 28px 22px;
+    background: #fffaf5;
+    border: 1px solid #f0e8f3;
+    border-radius: 22px;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.mindset-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(90, 65, 110, 0.09);
+}
+
+.card-icon {
+    font-size: 2rem;
+}
+
+.mindset-card h3 {
+    color: #6c527f;
+    margin: 15px 0 10px;
+}
+
+.mindset-card p,
+.reset-section > p:not(.eyebrow),
+.faith-card > p:last-child {
+    color: #766b7d;
+    line-height: 1.8;
+}
+
+/* Reset section */
+.reset-section {
+    padding: 35px 20px;
+    border-radius: 25px;
+    background: #f4effa;
+}
+
+#reset-message,
+#daily-challenge {
+    color: #675574;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* Faith section */
+.faith-card {
+    background: linear-gradient(135deg, #f4effb, #fff8f0);
+}
+
+.faith-verse {
+    color: #665078;
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin: 20px 0 10px;
+}
+
+/* Dark mode */
+body.dark .motivation-hero {
+    background: linear-gradient(135deg, #30253d, #3b3045, #29283d);
+}
+
+body.dark .motivation-hero h1,
+body.dark .motivation-section h2,
+body.dark .mindset-card h3 {
+    color: #eadcf7;
+}
+
+body.dark .motivation-hero p:not(.eyebrow),
+body.dark .mindset-card p,
+body.dark .reset-section > p:not(.eyebrow) {
+    color: #d0c3dc;
+}
+
+body.dark .quote-card,
+body.dark .reset-card,
+body.dark .challenge-card,
+body.dark .faith-card,
+body.dark .mindset-card {
+    background: #30283a;
+    border-color: #493b55;
+}
+
+body.dark #daily-quote,
+body.dark #reset-message,
+body.dark #daily-challenge,
+body.dark .faith-verse,
+body.dark .faith-card > p:last-child {
+    color: #e5d9ee;
+}
+
+body.dark .reset-section {
+    background: #292333;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 750px) {
+    .mindset-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .motivation-hero {
+        padding: 55px 20px;
+    }
+
+    .motivation-section h2 {
+        font-size: 1.65rem;
+    }
+
+    .quote-card,
+    .reset-card,
+    .faith-card,
+    .challenge-card {
+        padding: 25px 20px;
+    }
+}
+
+ 
